@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Quiz Game</title>
+    <link rel="stylesheet" href="Task3a.css" />
+</head>
+
+<body>
+    <body>
+        <div class="quiz-container">
+            <h1>📚 Quiz Game</h1>
+
+            <!-- Category Selection -->
+            <div id="start-screen">
+                <label for="category">Select Category:</label>
+                <select id="category">
+                    <option value="9">General Knowledge</option>
+                    <option value="17">Science & Nature</option>
+                    <option value="18">Computers</option>
+                    <option value="23">History</option>
+                    <option value="21">Sports</option>
+                    <option value="22">Geography</option>
+                </select>
+                <button onclick="startQuiz()">Start Quiz</button>
+            </div>
+
+            <!-- Quiz Box -->
+            <div id="quiz-box" class="hidden">
+                <h2 id="question">Loading...</h2>
+                <div id="options"></div>
+                <button type="button" id="next-btn" disabled>Next</button>
+            </div>
+
+            <!-- Result Box -->
+            <div id="result-box" class="hidden">
+                <h2>Your Score: <span id="score"></span></h2>
+                <button onclick="resetQuiz()">Play Again</button>
+            </div>
+        </div>
+    </body>
+
+    <script src="Task3a.js"></script>
+</body>
+
+</html>

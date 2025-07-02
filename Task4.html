@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - To-Do App</title>
+    <link rel="stylesheet" href="Task4.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <span class="header-icon">📝</span>
+                Task Manager
+            </h1>
+            <p>Organize your tasks and stay productive</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="overdueTasks">0</div>
+                <div class="stat-label">Overdue</div>
+            </div>
+        </div>
+
+        <div class="add-task-form">
+            <div class="form-group">
+                <label for="taskTitle">Task Title *</label>
+                <input type="text" id="taskTitle" placeholder="Enter task title..." required>
+            </div>
+            
+            <div class="form-group">
+                <label for="taskDescription">Description</label>
+                <textarea id="taskDescription" placeholder="Enter task description..."></textarea>
+            </div>
+            
+            <div class="datetime-group">
+                <div class="form-group">
+                    <label for="taskDate">Due Date</label>
+                    <input type="date" id="taskDate">
+                </div>
+                <div class="form-group">
+                    <label for="taskTime">Due Time</label>
+                    <input type="time" id="taskTime">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Priority</label>
+                <div class="priority-group">
+                    <button type="button" class="priority-btn" data-priority="low">Low</button>
+                    <button type="button" class="priority-btn active medium" data-priority="medium">Medium</button>
+                    <button type="button" class="priority-btn" data-priority="high">High</button>
+                </div>
+            </div>
+            
+            <button class="add-btn" onclick="addTask()">
+                <span id="addBtnText">Add Task</span>
+            </button>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">All Tasks</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="overdue">Overdue</button>
+            <button class="filter-btn" data-filter="high">High Priority</button>
+        </div>
+
+        <div class="tasks-container" id="tasksContainer">
+            <div class="empty-state">
+                <div class="empty-state-icon">📋</div>
+                <h3>No tasks yet</h3>
+                <p>Add your first task to get started!</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="Task4.js"></script>
+</html>
